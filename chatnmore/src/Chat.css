@@ -1,0 +1,59 @@
+.newMessageBox{
+    display:flex;
+    flex-direction: row;
+}
+.userList{
+    display:flex;
+    flex-direction:row;
+    color:blueviolet;
+}
+ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+  }
+  
+  li {
+    margin-bottom: 10px; /* Adjust the margin to create space between buttons */
+  }
+  .message__container {
+    width: 100%;
+    height: 80vh;
+    background-color: #fff;
+    padding: 20px;
+    overflow-y: scroll;
+  }
+  
+  .message__container > * {
+    margin-bottom: 10px;
+  }
+  .message__recipient {
+    background-color: #f5ccc2;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+  .message__sender {
+    background-color: rgb(194, 243, 194);
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: auto;
+    font-size: 15px;
+  }
+  
+  .message__chats > p {
+    font-size: 13px;
+  }
+  .sender__name {
+    text-align: right;
+  }
+  .receiver__name {
+    text-align: left;
+  }
+  .message__status {
+    position: fixed;
+    bottom: 100px;
+    font-size: 13px;
+    font-style: italic;
+  }

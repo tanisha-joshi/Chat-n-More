@@ -7,7 +7,11 @@ import {useStateValue} from './StateProvider.js'
 import {useEffect} from 'react';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase.js"
+import Chat from './Chat.js'
 import FileUpload from './FileUpload.js'
+import socketIO from 'socket.io-client';
+import ChatPage from './ChatPage.js';
+const socket = socketIO.connect('http://localhost:3001');
 function App() {
   const [{user},dispatch]=useStateValue();
   useEffect(() =>{
@@ -37,7 +41,9 @@ function App() {
       <Router>
         <div className="App">
         <Routes>
-          <Route path="/" element = {<Login />} />
+          <Route path="/chatPage" element = {<ChatPage  socket={socket} />} />
+          <Route path="/chat" element = {<Chat socket={socket} user={user} />} />
+          <Route path="/" element={<Login />} />
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/FileUpload" element={<FileUpload />} />
         </Routes>

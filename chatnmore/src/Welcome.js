@@ -2,17 +2,18 @@ import React from 'react'
 import { Button } from 'flowbite-react';
 import {useNavigate} from 'react-router-dom'
 import Home from './Home.js'
+import Navbar from './Navbar.js'
 function Welcome() {
   const Navigate=useNavigate();
   const renderUser=()=>{
     Navigate('/FileUpload')
   }
   return (
-    <div className="welcome">
-        <h1>Welcome</h1>
-        <Button onClick={renderUser}>User</Button>
+    <div className="welcome" >
+        <Navbar renderUser={renderUser}/>
         <br></br>
-        <h1>Feed</h1>
+        <p class="text-2xl text-gray-900 font-extralight dark:text-white">Your Feed</p>
+
         <br />
         <Home />
     </div>

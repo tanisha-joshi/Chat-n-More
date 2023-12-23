@@ -8,9 +8,6 @@ import {auth} from './firebase.js';
 import url from './image.jpg'
 
 function Home() {
-  console.log("url is",url);
-
- 
     const [like,setLike]=useState(false);
     const [{user},dispatch]=useStateValue();
     const [all,setAll]=useState([]);
@@ -262,7 +259,7 @@ function Home() {
         return(
            <div class="ml-2"> 
            <figure class="max-w-lg">
-              <img class="h-auto max-w-full rounded-lg" src={url} alt="image description" />
+              <img class="h-auto w-full rounded-lg" src={item.url} alt="image description" />
               <figcaption class="mt-2 text-l text-center text-gray-900 dark:text-gray-400"><p class="text-xl font-medium text-gray-900 dark:text-white">{item.caption}</p></figcaption>
               <figcaption class="mt-2 text-xs text-left text-gray-700 dark:text-gray-600"><span class="italic">Posted by-{item.uid}</span></figcaption>
               <figcaption class="mt-2 text-xs text-left text-gray-700 dark:text-gray-600"><span class="italic">Posted on-{item.created_at}</span></figcaption>

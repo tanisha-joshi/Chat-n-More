@@ -11,6 +11,7 @@ import Chat from './Chat.js'
 import FileUpload from './FileUpload.js'
 import socketIO from 'socket.io-client';
 import ChatPage from './ChatPage.js';
+import TextInput from './TextInput.js';
 const socket = socketIO.connect('http://localhost:3001');
 function App() {
   const [{user},dispatch]=useStateValue();

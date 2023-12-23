@@ -2,10 +2,11 @@ import React from 'react'
 import logo from './cat-logo.png'
 
 function Navbar({renderUser}) {
+  console.log("logo is",logo);
   return (
     <div className="Navbar">
         
-
+       
 <nav class="bg-border-gray-200 bg-pink-900 text-white dark:bg-gray-900">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
